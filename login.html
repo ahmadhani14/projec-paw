@@ -1,0 +1,76 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Imune+ Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#2f7d81] min-h-screen flex items-center justify-center p-6">
+  <main class="bg-[#fffefb] rounded-xl max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start p-10 md:p-16 gap-8 md:gap-20">
+   <section class="flex flex-col flex-1 max-w-md w-full">
+    <p class="text-[#2f7d81] text-base mb-1.5">Get immunized, stay safe with</p>
+    <h1 class="text-[#2f7d81] font-extrabold text-5xl md:text-6xl leading-tight mb-8">
+     Imune <span class="inline-block text-5xl md:text-6xl font-extrabold">+</span>
+    </h1>
+
+<!-- FORM LOGIN DENGAN JS -->
+<form class="flex flex-col gap-5 w-full" onsubmit="return redirectToHome()">
+    <label class="flex flex-col text-[#2f7d81] font-semibold text-sm" for="username">
+      Username
+      <input
+        autocomplete="username"
+        class="mt-1 rounded-full border border-gray-300 px-5 py-3 text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2f7d81] shadow-sm"
+        id="username"
+        type="text"
+        required
+      />
+    </label>
+    <label class="flex flex-col text-[#2f7d81] font-semibold text-sm" for="password">
+      Password
+      <input
+        autocomplete="current-password"
+        class="mt-1 rounded-full border border-gray-300 px-5 py-3 text-base text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#2f7d81] shadow-sm"
+        id="password"
+        type="password"
+        required
+      />
+    </label>
+    <div class="flex justify-end">
+      <a class="text-[#2f7d81] text-xs hover:underline" href="fpw.html">Forgot password?</a>
+    </div>
+    <button
+      class="bg-[#2f7d81] text-white font-semibold rounded-full py-3 mt-1 text-base hover:bg-[#276a6d] transition-colors"
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+  
+
+    <p class="text-[#2f7d81] text-xs mt-6">
+     Don't have an account?
+     <a class="text-blue-600 font-semibold hover:underline" href="signup.html">Sign up</a>
+    </p>
+   </section>
+
+   <section class="flex-1 max-w-lg w-full">
+    <img alt="Illustration..." class="w-full h-auto select-none" draggable="false" height="300" src="https://storage.googleapis.com/a1aa/image/84bbbd37-da5f-4423-b455-edcf2672a97e.jpg" width="600"/>
+   </section>
+  </main>
+
+  <!-- SCRIPT UNTUK REDIRECT -->
+  <script>
+    function redirectToHome() {
+      window.location.href = "homep.html";
+      return false;
+    }
+  </script>
+ </body>
+</html>

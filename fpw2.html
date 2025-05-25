@@ -1,0 +1,112 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Forgot Password - Verify Code</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <style>
+   body {
+    font-family: 'Inter', sans-serif;
+   }
+   input[type="text"]::-webkit-inner-spin-button,
+   input[type="text"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+   }
+  </style>
+ </head>
+ <body class="bg-[#2d7d7f] min-h-screen flex items-center justify-center p-6">
+  <main class="bg-white rounded-2xl max-w-6xl w-full flex flex-col md:flex-row items-start p-10 md:p-16 gap-10 md:gap-20">
+   <section class="flex flex-col w-full md:w-1/2">
+    <div class="flex items-center mb-8 space-x-4">
+     <button aria-label="Back" class="text-[#2d7d7f] text-2xl self-start" type="button">
+      <i class="fas fa-chevron-left"></i>
+     </button>
+     <h1 class="text-[#2d7d7f] font-semibold text-3xl md:text-4xl leading-tight">
+      Forgot Password
+     </h1>
+    </div>
+    <div class="flex flex-col items-center mb-8">
+     <div class="border border-[#2d7d7f] rounded-xl p-4 mb-3 flex items-center justify-center w-16 h-16">
+      <img
+       alt="Fingerprint icon in green color inside a rounded square border"
+       class="w-8 h-8"
+       draggable="false"
+       height="32"
+       src="https://storage.googleapis.com/a1aa/image/5269a54d-58e3-4a80-cfd4-fc16d1dfc3a7.jpg"
+       width="32"
+      />
+     </div>
+     <p class="text-green-700 font-semibold text-sm mb-1">Password Reset</p>
+     <p class="text-[#2d7d7f] text-xs text-center max-w-[220px]">
+      we send the reset code to <strong>xxx@gmail.com</strong>
+     </p>
+    </div>
+
+    <form class="flex flex-col items-center max-w-md w-full" id="verifyForm">
+     <div class="flex gap-4 mb-8 justify-center w-full max-w-[220px]">
+      <input
+       aria-label="Reset code digit 1"
+       class="w-14 h-16 border border-[#2d7d7f] rounded-md text-center text-xl font-semibold focus:outline-none focus:ring-2 focus:ring-[#2d7d7f]"
+       inputmode="numeric"
+       maxlength="1"
+       pattern="[0-9]*"
+       type="text"
+      />
+      <input
+       aria-label="Reset code digit 2"
+       class="w-14 h-16 border border-[#2d7d7f] rounded-md text-center text-xl font-semibold focus:outline-none focus:ring-2 focus:ring-[#2d7d7f]"
+       inputmode="numeric"
+       maxlength="1"
+       pattern="[0-9]*"
+       type="text"
+      />
+      <input
+       aria-label="Reset code digit 3"
+       class="w-14 h-16 border border-[#2d7d7f] rounded-md text-center text-xl font-semibold focus:outline-none focus:ring-2 focus:ring-[#2d7d7f]"
+       inputmode="numeric"
+       maxlength="1"
+       pattern="[0-9]*"
+       type="text"
+      />
+      <input
+       aria-label="Reset code digit 4"
+       class="w-14 h-16 border border-[#2d7d7f] rounded-md text-center text-xl font-semibold focus:outline-none focus:ring-2 focus:ring-[#2d7d7f]"
+       inputmode="numeric"
+       maxlength="1"
+       pattern="[0-9]*"
+       type="text"
+      />
+     </div>
+     <button
+      class="bg-[#2d7d7f] text-white font-semibold rounded-full py-3 w-full max-w-[220px] mx-auto shadow-lg hover:bg-[#276a6c] transition select-none"
+      type="submit"
+     >
+      Verify
+     </button>
+    </form>
+   </section>
+
+   <section class="w-full md:w-1/2 flex justify-center">
+    <img
+     alt="Illustration of a man holding a phone next to a password login screen with a lock icon and a plant"
+     class="max-w-full h-auto select-none"
+     draggable="false"
+     height="300"
+     src="https://storage.googleapis.com/a1aa/image/1177b88e-3f78-46be-af2c-d927903ce1fc.jpg"
+     width="400"
+    />
+   </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('verifyForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      window.location.href = 'fpw3.html';
+    });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,75 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Forgot Password
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-[#3B8B8B] min-h-screen flex items-center justify-center p-6">
+  <div class="bg-[#FFFCF9] rounded-xl max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start p-10 md:p-16 gap-10 md:gap-20">
+   <div class="flex flex-col w-full md:w-1/2">
+    <button aria-label="Back" class="text-[#3B8B8B] mb-6 text-2xl md:text-3xl font-semibold flex items-center gap-3">
+     <i class="fas fa-chevron-left">
+     </i>
+     <span>
+      Forgot Password
+     </span>
+    </button>
+    <div class="flex flex-col items-center mb-6">
+     <div class="border border-[#3B8B8B] rounded-xl w-14 h-14 flex items-center justify-center mb-3">
+      <i class="fas fa-ellipsis-h text-[#3B8B8B] text-xl">
+      </i>
+     </div>
+     <p class="text-[#3B8B8B] font-semibold text-sm mb-1">
+      Password Reset
+     </p>
+     <p class="text-[#3B8B8B] text-xs text-center max-w-[220px]">
+      minimum
+      <span class="font-semibold">
+       8 characters
+      </span>
+      letters and
+      <span class="font-semibold">
+       numbers
+      </span>
+     </p>
+    </div>
+    <form class="flex flex-col gap-4 w-full max-w-md" id="confirmForm">
+     <label class="text-[#3B8B8B] font-semibold text-sm" for="new-password">
+      New Password
+     </label>
+     <input class="border border-[#3B8B8B] rounded-full py-2 px-5 shadow-[3px_3px_3px_rgba(0,0,0,0.15)] focus:outline-none" id="new-password" type="password"/>
+     <label class="text-[#3B8B8B] font-semibold text-sm" for="confirm-password">
+      Confirm Password
+     </label>
+     <input class="border border-[#3B8B8B] rounded-full py-2 px-5 shadow-[3px_3px_3px_rgba(0,0,0,0.15)] focus:outline-none" id="confirm-password" type="password"/>
+     <button class="bg-[#3B8B8B] text-white font-semibold rounded-full py-2 mt-4 shadow-[3px_3px_3px_rgba(0,0,0,0.15)]" type="submit">
+      Confirm
+     </button>
+    </form>
+   </div>
+   <div class="w-full md:w-1/2 flex justify-center">
+    <img alt="Illustration of a woman using a phone with security icons around like fingerprint, lock, credit card, money, and location pin on a light green abstract background" class="max-w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/108eece1-4e43-4bdd-7703-e17ec6171c2b.jpg" width="400"/>
+   </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('confirmForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // mencegah reload form
+      // Kamu bisa tambahkan validasi password di sini kalau mau
+      window.location.href = 'fpw4.html';
+    });
+  </script>
+ </body>
+</html>

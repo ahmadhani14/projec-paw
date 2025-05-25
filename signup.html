@@ -1,0 +1,62 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+     font-family: 'Inter', sans-serif;
+   }
+  </style>
+ </head>
+ <body class="bg-[#2f7f81] min-h-screen flex items-center justify-center p-6">
+  <main class="bg-[#fffdfa] rounded-2xl max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start p-10 md:p-16 gap-10 md:gap-20">
+   <section class="flex flex-col w-full md:w-1/2">
+    <div class="mb-6 flex items-center gap-4 text-[#2f7f81]">
+     <button aria-label="Back" class="text-[#2f7f81]">
+      <i class="fas fa-chevron-left text-lg"></i>
+     </button>
+     <h1 class="font-extrabold text-3xl">Sign up</h1>
+    </div>
+    <!-- Tambahkan action ke form -->
+    <form class="flex flex-col gap-6 w-full max-w-md" onsubmit="event.preventDefault(); window.location.href='login.html';">
+     <label class="flex flex-col text-[#2f7f81] font-semibold text-sm">
+      Name
+      <input class="mt-1 rounded-full border border-gray-300 shadow px-6 py-3 text-base outline-none focus:ring-2 focus:ring-[#2f7f81]" name="name" type="text"/>
+     </label>
+     <label class="flex flex-col text-[#2f7f81] font-semibold text-sm">
+      Username
+      <input class="mt-1 rounded-full border border-gray-300 shadow px-6 py-3 text-base outline-none focus:ring-2 focus:ring-[#2f7f81]" name="username" type="text"/>
+     </label>
+     <label class="flex flex-col text-[#2f7f81] font-semibold text-sm">
+      Email
+      <input class="mt-1 rounded-full border border-gray-300 shadow px-6 py-3 text-base outline-none focus:ring-2 focus:ring-[#2f7f81]" name="email" type="email"/>
+     </label>
+     <label class="flex flex-col text-[#2f7f81] font-semibold text-sm">
+      Password
+      <input class="mt-1 rounded-full border border-gray-300 shadow px-6 py-3 text-base outline-none focus:ring-2 focus:ring-[#2f7f81]" name="password" type="password"/>
+     </label>
+     <button class="bg-[#2f7f81] text-white font-semibold rounded-full py-3 mt-2 hover:bg-[#276a6b] transition-colors" type="submit">
+      Sign Up
+     </button>
+    </form>
+    <p class="text-[#2f7f81] text-xs font-semibold mt-6 max-w-md">
+     Already have an account?
+     <a class="text-[#2f7f81] font-semibold underline" href="login.html">Log In</a>
+    </p>
+    <p class="text-[#2f7f81] text-xs font-semibold mt-6 max-w-md text-center">Or Sign Up With</p>
+    <div class="flex justify-center mt-4">
+     <button aria-label="Sign up with Google" class="rounded-full bg-white p-3 shadow-md hover:shadow-lg transition-shadow">
+      <img alt="Google logo" class="block" height="40" src="https://storage.googleapis.com/a1aa/image/5a593970-057a-48ab-0c73-5df625cc2ab3.jpg" width="40"/>
+     </button>
+    </div>
+   </section>
+   <section class="w-full md:w-1/2 flex justify-center">
+    <img alt="Illustration" class="max-w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/45ca4ef1-9a1b-4236-27dc-40410cc75c1c.jpg" width="400"/>
+   </section>
+  </main>
+ </body>
+</html>
